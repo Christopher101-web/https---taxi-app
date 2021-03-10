@@ -1,0 +1,101 @@
+body{
+    background-color: rgba(0, 0, 0, .51);
+    font-family: "raleway", sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+img{
+    animation-name: move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px gray;
+}
+
+@keyframes move{
+    0%{right: 0px; top: 0px;}
+    25%{right: 45%; top: 0px;}
+    50%{left: 45%; top: 0px;}
+}
+
+.container{
+    width: 100%;
+    padding: 1rem;
+}
+
+.labels{
+    color: #ffffff;
+    font-size: 4vw;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    animation-name: change-color;
+    animation-duration: 2s;
+}
+
+@keyframes change-color{
+    from{
+        color: #ffffff;
+    }
+    to{
+        color: darkblue;
+    }
+}
+
+#go{
+    margin-top: 4rem;
+    background-color: #f1f1f1;
+    border: 0;
+    width: 80%;
+    height: 5rem;
+    font-size: 3rem;
+    border-radius: .5em;
+    box-shadow: 0 4px 8px 0 #000000;
+    text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+    color: tomato;
+    transition: width 2s;
+}
+
+#go:hover{
+    width: 300px;
+    color: #000000;
+}
+
+.inputs{
+    background-color: #fff;
+    width: 80%;
+    border-radius: .5em;
+    font-size: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #000000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+#output{
+    font-size: 4vw;
+    margin-top: 3rem;
+    color: tomato;
+    text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Taxi App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!--- Bootstrap CSS --->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!--- Custom CSS --->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <br/>
+        <img src="images/taxi.jpg" width="100px" height="100px"/>
+        <div class="container">
+            <form>
+                <label class="labels" for="amount">How much monthly?</label><br/>
+                <input class="inputs" type="number" id="amount" /><br/>
+                <br/><br/><br/>
+                <label class="labels" for="days">How many days?</label><br/>
+                <input class="inputs" type="number" id="days" /><br/>
+                <button id="go">Go!</button>
+            </form>
+            <div id="output"></div>
+            <br/><br/>
+        </div>
+        <!-- Scripts -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="assets/js/isotope.min.js"></script>
+        <script src="assets/js/owl-carousel.js"></script>
+        <script src="assets/js/lightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- Custom JavaScript -->
+        <script>
+            document.getElementById("go").addEventListener('click', calculateAmount);
+            function calculateAmount(e){
+                e.preventDefault();
+                
+                var monthlyAmount = parseInt(document.getElementById("amount").value);
+                var days = parseInt(document.getElementById("days").value);
+                var finalValue = monthlyAmount / 22 * days;
+                
+                document.getElementById("output").innerHTML = "R " + finalValue.toFixed(2);
+            }
+        </script>
+    </body>
+</html>
